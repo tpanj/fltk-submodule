@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.16)
 project(MyFLTKProject)
 
+# https://github.com/fltk/fltk/blob/master/README.CMake.txt
+set(FLTK_USE_SYSTEM_LIBPNG OFF)
+set(FLTK_USE_SYSTEM_ZLIB OFF)
+
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
