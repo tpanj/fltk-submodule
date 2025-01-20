@@ -50,7 +50,7 @@ jobs:
 
     steps:
     - name: Set up dependencies (Linux only)
-      if: runner.os == 'ubuntu-latest'
+      if: runner.os == 'Linux'
       run: |
         sudo apt-get install libx11-dev
         sudo apt-get install libglu1-mesa-dev
@@ -58,7 +58,7 @@ jobs:
         sudo apt-get install libxcursor-dev
 
     - name: Set up dependencies (MacOs only)
-      if: runner.os == 'macos-latest'
+      if: runner.os == 'macOS'
       run: |
         brew update
         brew install cmake
