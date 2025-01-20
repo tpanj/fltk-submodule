@@ -80,15 +80,15 @@ int main() {
    ```
 2. Run CMake to configure the project:
    ```bash
-   cmake ..
+   cmake .. -DCMAKE_BUILD_TYPE=Release
    ```
 3. Build the project:
    ```bash
-   cmake --build . # or on dos: cmake -G "NMake Makefiles" ..
+   cmake --build . --config Release  # or on dos: cmake -G "NMake Makefiles" ..
    ```
 4. Run the application:
    ```bash
-   ./MyFLTKProject
+   ./MyPortableApp
    ```
 
 ---
@@ -106,3 +106,7 @@ int main() {
   ```
 
 This approach ensures that FLTK is bundled and built as part of your project without requiring manual installation.
+
+---
+
+git clone --recurse-submodules git@github.com:tpanj/fltk-submodule.git
