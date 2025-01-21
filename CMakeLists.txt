@@ -35,7 +35,7 @@ set(CPACK_GENERATOR "ZIP")
 
 # Platform-specific settings
 if(APPLE)
-#    set(CPACK_GENERATOR "DragNDrop")
+    set(CPACK_GENERATOR "ZIP;DragNDrop")
     set(CPACK_BUNDLE_NAME "MyPortableApp")
     set(CPACK_BUNDLE_ICON "${CMAKE_SOURCE_DIR}/icon.icns")
     set(CPACK_BUNDLE_PLIST "${CMAKE_SOURCE_DIR}/Info.plist")

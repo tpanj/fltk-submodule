@@ -63,11 +63,11 @@ jobs:
         sudo apt-get install libxft-dev
         sudo apt-get install libxcursor-dev
 
-    - name: Set up dependencies (MacOs only)
-      if: runner.os == 'macOS'
-      run: |
-        brew update
-        brew install cmake
+    #- name: Set up dependencies (MacOs only)
+      #if: runner.os == 'macOS'
+      #run: |
+        #brew update
+        #brew install cmake
     
     - uses: actions/checkout@v4
       with:
@@ -102,7 +102,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: ${{ matrix.os }}-${{ matrix.arch }}-package
-        path: build/*.zip
+        path: build/*.{zip,dmg}
         retention-days: 80
 
 #    - name: Test
