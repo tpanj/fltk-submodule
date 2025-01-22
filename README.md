@@ -80,11 +80,11 @@ int main() {
    ```
 2. Run CMake to configure the project:
    ```bash
-   cmake .. -DCMAKE_BUILD_TYPE=Release
+   cmake .. -DCMAKE_BUILD_TYPE=Release # or on dos: cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=Release ..
    ```
 3. Build the project:
    ```bash
-   cmake --build . --config Release  # or on dos: cmake -G "NMake Makefiles" ..
+   cmake --build . --config Release
    ```
 4. Run the application:
    ```bash
